@@ -29,7 +29,7 @@ https://api.ragy.ai/v1/search?api_key=YOUR_API_KEY&q=what%20is%20rag&lang=en&cou
 *\* these are large fields which can only be retrieved live so this slows down. Use only when necessary and with timeout &gt;= 2*
 
 ## Response:
-The response contains 4 types of results ([view full json example](https://raw.githubusercontent.com/ragyai/ragy-docs/main/search_example.json)):
+The response contains 4 types of results ([view full json example](https://github.com/ragyai/ragy-docs/blob/main/search_example.json)):
 - **results**: web results with a url, title, description and optional with a content field (about 10 sentences from the webpage). The description/content is uniquely summarized in the snippets field, when max_snippets_length is set above 0
 - **qnas**: qna results with a question, answer and link *
 - **images**: image results *
@@ -56,7 +56,7 @@ We summarize each html page into the most important unique sentences (with the t
 **What's the speed?**
 Because everything is done simultaneously, an api call normally takes max 2 seconds (you can set a timeout from 0.5 to 5 seconds).
 
-Example result ([view full json example](https://raw.githubusercontent.com/ragyai/ragy-docs/main/search_example.json)):
+Example result ([view full json example](https://github.com/ragyai/ragy-docs/blob/main/search_example.json)):
 ```
 {
          url: "https://aws.amazon.com/what-is/retrieval-augmented-generation/",
