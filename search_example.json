@@ -1,4 +1,5 @@
 {
+    "example_message": "This example is limited to 2 instead of default 50 results:",
     "status": "ok",
     "results": [
         {
