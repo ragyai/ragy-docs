@@ -1,0 +1,224 @@
+openapi: 3.0.0
+info:
+  title: RAGY Web Search API
+  version: 1.0.0
+  description: Retrieve the search results for a query (with 10 different engines), while we spider the top web pages and summarize them at the same time (all within 2 seconds)
+
+servers:
+  - url: https://api.ragy.ai/v1
+
+paths:
+  /search:
+    get:
+      summary: Perform a web search
+      description: Search the web based on a query and various parameters
+      parameters:
+        - name: api_key
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Your API key for authentication (free on https://www.ragy.ai/signup)
+          
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+          description: The search query string (e.g., "what is rag?").
+          
+        - name: lang
+          in: query
+          required: false
+          schema:
+            type: string
+            default: en
+            example: de            
+          description: Language of the search results.
+
+        - name: country
+          in: query
+          required: false
+          schema:
+            type: string
+            default: US
+            example: DE
+          description: Country code for regional search results.
+        
+        - name: timeout
+          in: query
+          required: false
+          schema:
+            type: number
+            format: float
+            default: 2
+            example: 2.5
+          description: Timeout in seconds for the search request.
+        
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            default: 50
+            example: 100
+          description: Maximum number of results (for results, qnas, images and videos) to return (5 to 100).
+        
+        - name: max_snippets_length
+          in: query
+          required: false
+          schema:
+            type: integer
+            default: 10000
+            example: 20000
+          description: Maximum length of snippets to return (0 meanse no snippets).
+        
+        - name: add_markdown
+          in: query
+          required: false
+          schema:
+            type: integer
+            enum: [0, 1]
+            default: 0
+          description: Whether to add markdown formatted content to results (field markdown).
+        
+        - name: add_content_raw
+          in: query
+          required: false
+          schema:
+            type: integer
+            enum: [0, 1]
+            default: 0
+          description: Whether to include raw content in the response (field raw_content).
+        
+        - name: add_reader
+          in: query
+          required: false
+          schema:
+            type: integer
+            enum: [0, 1]
+            default: 0
+          description: Whether to include raw html reader content in the response (field reader).
+        
+        - name: add_html
+          in: query
+          required: false
+          schema:
+            type: integer
+            enum: [0, 1]
+            default: 0
+          description: Whether to include raw html in the response (field html).
+
+      responses:
+        '200':
+          description: Successful search response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "ok"
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        url:
+                          type: string
+                          format: uri
+                          example: "https://a..on.com/what-is/retrieval-augmented-generation/"
+                        title:
+                          type: string
+                          example: "What is RAG? - Retrieval-Augmented Generation AI Explained"
+                        description:
+                          type: string
+                          example: "RAG is a process of optimizing the output..."
+                        content:
+                          type: string
+                          example: "What is Retrieval-Augmented Generation (RAG), how and why businesses use RAG AI..."
+                        snippets:
+                          type: string
+                          example: "What is Retrieval-Augmented Generation (RAG)..."
+                        content_raw:
+                          type: string
+                          example: null
+                        markdown:
+                          type: string
+                          example: null
+                        reader:
+                          type: string
+                          example: null  
+                        html:
+                          type: string
+                          example: null
+                  qnas:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        question:
+                          type: string
+                          example: "What is rag in AI?"
+                        answer:
+                          type: string
+                          example: "RAG is a technique that combines..."
+                        link:
+                          type: string
+                          format: uri
+                          example: "https://www.data..mp.com/blog/what-is..."
+                  images:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        src:
+                          type: string
+                          format: uri
+                          example: "https://ww.n..t.com/news/2019/08/01/candidate-pages/rag.jpg"
+                        link:
+                          type: string
+                          format: uri
+                          example: "https://www.data..mp.com/en/rag.html"
+                        width:
+                          type: integer
+                          example: 800
+                        height:
+                          type: integer
+                          example: 1200
+                  videos:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        src:
+                          type: string
+                          format: uri
+                          example: "https://www.youtube.com/watch?v=12345"
+                        width:
+                          type: integer
+                          example: 1920
+                        height:
+                          type: integer
+                          example: 1080
+                  related:
+                    type: array
+                    items:
+                      type: string
+                      example: "what is rag in ai"                          
+                  questions:
+                    type: array
+                    items:
+                      type: string
+                      example: "Why is Rag important?"
+                  response_time:
+                    type: number
+                    format: float
+                    example: 1.9926
+
+        '400':
+          description: Bad request, no q in parameters
+        '401':
+          description: No authentication/wrong api key
+
