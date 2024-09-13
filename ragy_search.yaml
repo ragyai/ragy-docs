@@ -10,7 +10,7 @@ servers:
 paths:
   /search:
     get:
-      summary: Perform a web search
+      summary: Perform a web search 
       description: Search the web based on a query and various parameters
       parameters:
         - name: api_key
