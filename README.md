@@ -4,7 +4,7 @@ docs for Ragy.ai the web search api for AI/LLMs
 ## Endpoint:
 https://api.ragy.ai/v1/search
 
-## Authentication:
+## Authentication: 
 [Signup for an api key](). You can use this key for api authentication with:
 - a header parameter: 'Authentication: Bearer YOUR_API_KEY' (recommended)
 - a url parameter: &api_key=YOUR_API_KEY
