@@ -1,0 +1,92 @@
+{
+    "status": "ok",
+    "results": [
+        {
+            "url": "https:\/\/aws.amazon.com\/what-is\/retrieval-augmented-generation\/",
+            "title": "What is RAG? - Retrieval-Augmented Generation AI Explained - AWS",
+            "description": "RAG is a process of optimizing the output of a large language model by retrieving relevant information from external data sources. Learn how RAG improves LLM performance, benefits, and challenges for generative AI applications. RAG extends the already powerful capabilities of LLMs to specific domains or an organization's internal knowledge base, all without the need to retrain the model. It is a cost-effective approach to improving LLM output so it remains relevant, accurate, and useful in various contexts. Why is Retrieval-Augmented Generation important?",
+            "content": "What is Retrieval-Augmented Generation (RAG), how and why businesses use RAG AI, and how to use RAG with AWS.\nWithout RAG, the LLM takes the user input and creates a response based on information it was trained on\u2014or what it already knows.\nWith RAG, an information retrieval component is introduced that utilizes the user input to first pull information from a new data source.\nThe user query and the relevant information are both given to the LLM.\nThe LLM uses the new knowledge and its training data to create better responses.\nAnother AI technique, called embedding language models, converts data into numerical representations and stores it in a vector database.\nThis process creates a knowledge library that the generative AI models can understand.\nThe user query is converted to a vector representation and matched with the vector databases.\nNext, the RAG model augments the user input (or prompts) by adding the relevant retrieved data in context.\nThe augmented prompt allows the large language models to generate an accurate answer to user queries.",
+            "snippets": "What is Retrieval-Augmented Generation (RAG), how and why businesses use RAG AI, and how to use RAG with AWS.\nWithout RAG, the LLM takes the user input and creates a response based on information it was trained on\u2014or what it already knows.\nWith RAG, an information retrieval component is introduced that utilizes the user input to first pull information from a new data source.\nThe user query and the relevant information are both given to the LLM.\nThe LLM uses the new knowledge and its training data to create better responses.\nAnother AI technique, called embedding language models, converts data into numerical representations and stores it in a vector database.\nThis process creates a knowledge library that the generative AI models can understand.\nThe user query is converted to a vector representation and matched with the vector databases.\nNext, the RAG model augments the user input (or prompts) by adding the relevant retrieved data in context.\nThe augmented prompt allows the large language models to generate an accurate answer to user queries.\nRAG is a process of optimizing the output of a large language model by retrieving relevant information from external data sources.\nLearn how RAG improves LLM performance, benefits, and challenges for generative AI applications.\nRAG extends the already powerful capabilities of LLMs to specific domains or an organization's internal knowledge base, all without the need to retrain the model.\nIt is a cost-effective approach to improving LLM output so it remains relevant, accurate, and useful in various contexts."
+        },
+        {
+            "url": "https:\/\/research.ibm.com\/blog\/retrieval-augmented-generation-RAG",
+            "title": "What is retrieval-augmented generation (RAG)? - IBM Research",
+            "description": "RAG is an AI framework for retrieving facts to ground LLMs on the most accurate information and to give users insight into AI\u2019s decision making process. \u201cIn a RAG system, you are asking the model to respond to a question by browsing through the content in a book, as opposed to trying to remember facts from memory.\u201d As the name suggests, RAG has two phases: retrieval and content generation.",
+            "content": "RAG is an AI framework for retrieving facts from an external knowledge base to ground large language models (LLMs) on the most accurate, up-to-date information and to give users insight into LLMs\u2019 generative process.\nRetrieval-augmented generation (RAG) is an AI framework for improving the quality of LLM-generated responses by grounding the model on external sources of knowledge to supplement the LLM\u2019s internal representation of information.\nImplementing RAG in an LLM-based question answering system has two main benefits: It ensures that the model has access to the most current, reliable facts, and that users have access to the model\u2019s sources, ensuring that its claims can be checked for accuracy and ultimately trusted.\nBy grounding an LLM on a set of external, verifiable facts, the model has fewer opportunities to pull information baked into its parameters.\nRAG also reduces the need for users to continuously train the model on new data and update its parameters as circumstances evolve.\nIn the generative phase, the LLM draws from the augmented prompt and its internal representation of its training data to synthesize an engaging answer tailored to the user in that instant.\nThe answer can then be passed to a chatbot with links to its sources.\nIBM is currently using RAG to ground its internal customer-care chatbots on content that can be verified and trusted.\nTo craft its response, the LLM first pulls data from Alice\u2019s HR files to find out how much vacation she gets as a longtime employee, and how many days she has left for the year.\nAt IBM Research, we are focused on innovating at both ends of the process: retrieval, how to find and fetch the most relevant information possible to feed the LLM; and generation, how to best structure that information to get the richest responses from the LLM.",
+            "snippets": "RAG is an AI framework for retrieving facts from an external knowledge base to ground large language models (LLMs) on the most accurate, up-to-date information and to give users insight into LLMs\u2019 generative process.\nRetrieval-augmented generation (RAG) is an AI framework for improving the quality of LLM-generated responses by grounding the model on external sources of knowledge to supplement the LLM\u2019s internal representation of information.\nImplementing RAG in an LLM-based question answering system has two main benefits: It ensures that the model has access to the most current, reliable facts, and that users have access to the model\u2019s sources, ensuring that its claims can be checked for accuracy and ultimately trusted.\nBy grounding an LLM on a set of external, verifiable facts, the model has fewer opportunities to pull information baked into its parameters.\nRAG also reduces the need for users to continuously train the model on new data and update its parameters as circumstances evolve.\nIn the generative phase, the LLM draws from the augmented prompt and its internal representation of its training data to synthesize an engaging answer tailored to the user in that instant.\nThe answer can then be passed to a chatbot with links to its sources.\nIBM is currently using RAG to ground its internal customer-care chatbots on content that can be verified and trusted.\nTo craft its response, the LLM first pulls data from Alice\u2019s HR files to find out how much vacation she gets as a longtime employee, and how many days she has left for the year.\nAt IBM Research, we are focused on innovating at both ends of the process: retrieval, how to find and fetch the most relevant information possible to feed the LLM; and generation, how to best structure that information to get the richest responses from the LLM.\nRAG is an AI framework for retrieving facts to ground LLMs on the most accurate information and to give users insight into AI\u2019s decision making process. \u201cIn a RAG system, you are asking the model to respond to a question by browsing through the content in a book, as opposed to trying to remember facts from memory.\u201d As the name suggests, RAG has two phases: retrieval and content generation."
+        }
+    ],
+    "qnas": [
+        {
+            "question": "What is rag in AI?",
+            "answer": "RAG is a technique that combines the capabilities of pre-trained large language models (LLMs) with external data sources, allowing for more nuanced and accurate AI responses. Why is RAG important in improving the functionality of LLMs?",
+            "link": "https:\/\/www.datacamp.com\/blog\/what-is-retrieval-augmented-generation-rag"
+        },
+        {
+            "question": "What is a rag system?",
+            "answer": "\u201cIn a RAG system, you are asking the model to respond to a question by browsing through the content in a book, as opposed to trying to remember facts from memory.\u201d As the name suggests, RAG has two phases: retrieval and content generation.",
+            "link": "https:\/\/research.ibm.com\/blog\/retrieval-augmented-generation-RAG"
+        }
+    ],
+    "images": [
+        {
+            "src": "https:\/\/www.pngall.com\/wp-content\/uploads\/5\/Rag-PNG-Free-Image.png",
+            "link": "https:\/\/www.pngall.com\/rag-png\/download\/47086",
+            "width": 900,
+            "height": 620
+        },
+        {
+            "src": "https:\/\/static.grainger.com\/rp\/s\/is\/image\/Grainger\/5LVD3_AS01",
+            "link": "https:\/\/www.grainger.com\/product\/GRAINGER-APPROVED-Cloth-Rag-5LVD3",
+            "width": 1125,
+            "height": 1092
+        }
+    ],
+    "videos": [
+        {
+            "src": "https:\/\/www.youtube.com\/watch?v=qppV3n3YlF8",
+            "width": 1920,
+            "height": 1080
+        },
+        {
+            "src": "https:\/\/www.youtube.com\/watch?v=u47GtXwePms",
+            "width": 1920,
+            "height": 1080
+        }
+    ],
+    "related": [
+        "what is rag in ai",
+        "what is rag in llm",
+        "rag llm example",
+        "rag architecture",
+        "retrieval augmented generation",
+        "rag openai",
+        "rag chatgpt",
+        "retrieval augmented generation (rag)",
+        "example of rags",
+        "rag definition slang",
+        "rag meaning in text",
+        "what is rag used for",
+        "meaning of rag",
+        "what is a rag model",
+        "what is rag explain briefly",
+        "what does rag do"
+    ],
+    "questions": [
+        "What type of information is used in RAG?",
+        "What is retrieval augmented generation (RAG)?",
+        "What Is Retrieval-Augmented Generation (RAG)?",
+        "How does retrieval augmented generation (RAG) work?",
+        "How does generative AI use RAG?",
+        "Is RAG the same as generative AI?",
+        "Can a RAG cite references for the data it retrieves?",
+        "How is retrieval augmented generation being used today?",
+        "What are the benefits of retrieval augmented generation?",
+        "How Does Retrieval-Augmented Generation Work?",
+        "Why is Rag important?",
+        "What is rag in AI?",
+        "What is a rag system?",
+        "What does Rag stand for?"
+    ],
+    "response_time": 1.9994
+}
